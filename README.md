@@ -1,7 +1,7 @@
-#0x16. C - Simple Shell
+##0x16. C - Simple Shell
 This is a simple UNIX shell project. It provides basic shell functionalities.
 
-#Requirements
+##Requirements
 General
 Allowed editors: vi, vim, emacs
 All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -15,7 +15,7 @@ Use system calls only when you need to (why?)
 Write a README with the description of your project
 You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository.
 
-#More Info
+##More Info
 Output
 Unless specified otherwise, your program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
 The only difference is when you print an error, the name of the program must be equivalent to your argv[0] (See below)
@@ -34,7 +34,7 @@ $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
 
-#List of allowed functions and system calls
+##List of allowed functions and system calls
 access (man 2 access)
 chdir (man 2 chdir)
 close (man 2 close)
@@ -67,12 +67,12 @@ wait3 (man 2 wait3)
 wait4 (man 2 wait4)
 write (man 2 write)
 
-#Compilation
+##Compilation
 Your shell will be compiled this way:
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
-#Testing
+##Testing
 Your shell should work like this in interactive mode:
 
 $ ./hsh
