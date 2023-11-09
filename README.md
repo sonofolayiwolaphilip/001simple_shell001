@@ -1,7 +1,7 @@
-##0x16. C - Simple Shell
+<b>0x16. C - Simple Shell</b>
 This is a simple UNIX shell project. It provides basic shell functionalities.
 
-##Requirements
+<b>Requirements</b>
 General
 Allowed editors: vi, vim, emacs
 All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
