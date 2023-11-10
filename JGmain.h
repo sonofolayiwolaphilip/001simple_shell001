@@ -13,7 +13,7 @@ void JGread(char *command, size_t size);
 void JGexecute(const char *command);
 void JGexit(int status);
 void JGprint(const char *message);
-
+int _putchar(char c);
 
 #endif
 
