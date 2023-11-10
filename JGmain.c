@@ -1,12 +1,17 @@
 #include "JGmain.h"
+int _putchar(char c)
+{
+		return (write(1, &c, 1));
+}
 /**
  * main - the point of entry
  * @argc: argument counter
  * @argv: argument value
  * Return: the right values
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[], char *envp[])
 {
+	int i;
 	char command[256];
 
 	if (argc == 1)
@@ -47,4 +52,8 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Usage: %s [input_file]\n", argv[0]);
 		return (EXIT_FAILURE);
 	}	return (EXIT_SUCCESS);
+	for(i = 0; envp[i] != NULL; i++)
+		printf("\n%s", envp[i]);
+	getchar();
+	return 0;
 }
