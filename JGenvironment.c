@@ -2,7 +2,7 @@
 
 /**
  * JGprint_environment - Print environment variables
- * @env - pointer to the environ array
+ * @env: the pointer to environment
  */
 void JGprint_environment(const char *env[])
 {

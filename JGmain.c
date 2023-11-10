@@ -1,4 +1,9 @@
 #include "JGmain.h"
+/**
+ * _putchar - the putchar
+ * @c: the argument
+ * Return: appropriate values
+ */
 int _putchar(char c)
 {
 		return (write(1, &c, 1));
