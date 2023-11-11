@@ -2,7 +2,7 @@
 /**
  * JGread - Function to read input
  * @command: the pointer to the array
- * @size: the soze of the array
+ * @size: the size of the array
  */
 void JGread(char *command, size_t size)
 {
@@ -20,4 +20,9 @@ void JGread(char *command, size_t size)
 		}
 	}
 	command[strcspn(command, "\n")] = '\0';
+
+	if (command[0] == '#')
+	{
+		JGread(command, size);
+	}
 }
