@@ -18,11 +18,10 @@ typedef struct
 void display_prompt(void);
 void JGread(char *command, size_t size);
 void JGexecute(const char *command);
-void JGexit(int status);
+void JGexit(const char *status);
 void JGprint(const char *message);
 int _putchar(char c);
 void JGcd(const char *path);
-void JGexit(int status);
 void JGhelp(void);
 void handle_builtin(const char *command);
 void JGprint_environment(const char *env[]);

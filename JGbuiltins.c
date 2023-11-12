@@ -23,9 +23,24 @@ void JGcd(const char *path)
  * JGexit - Exit the shell
  * @status: The exit status
  */
-void JGexit(int status)
+void JGexit(const char *status)
 {
-	exit(status);
+	int exit_status = EXIT_SUCCESS;
+
+	if (status != NULL)
+	{
+		char *endptr;
+
+		exit_status = (int)strtol(status, &endptr, 10);
+
+		if (*endptr != '\0')
+		{
+			JGprint("exit: invalid status\n");
+			return;
+		}
+	}
+
+	exit(exit_status);
 }
 
 /**
