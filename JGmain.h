@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <fcntl.h>
+#include <limits.h>
 
 extern char **environ;
 
@@ -36,5 +37,7 @@ void JGenv(Shell *shell);
 const char *JGgetenv(const Shell *shell, const char *variable);
 void JGpopulate_env_list(Shell *shell);
 void execute_child_process(const char *command);
+void JGexecute_with_path(const char *command);
+int search_in_path(const char *command, const char *path, char *full_path);
 
 #endif
