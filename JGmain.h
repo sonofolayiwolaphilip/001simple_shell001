@@ -6,6 +6,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <fcntl.h>
 
 extern char **environ;
 
@@ -27,5 +28,10 @@ void handle_builtin(const char *command);
 void JGprint_environment(const char *env[]);
 void JGset_environment(Shell *shell, const char *variable, const char *value);
 void JGunset_environment(Shell *shell, const char *variable);
+void execute_external_command(char *const args[]);
+char **parse_command(const char *command);
+void redirect_input(const char *input_file);
+void redirect_output(const char *output_file);
+void execute_command(const char *command);
 
 #endif
