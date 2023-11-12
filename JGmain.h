@@ -33,5 +33,9 @@ char **parse_command(const char *command);
 void redirect_input(const char *input_file);
 void redirect_output(const char *output_file);
 void execute_command(const char *command);
+void JGenv(Shell *shell);
+const char *JGgetenv(const Shell *shell, const char *variable);
+void JGpopulate_env_list(Shell *shell);
+void execute_child_process(const char *command);
 
 #endif
