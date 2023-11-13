@@ -1,5 +1,7 @@
-#ifndef CODE_H
-#define CODE_H
+#ifndef JGMAIN_H
+#define JGMAIN_H
+
+#define MAX_ARGS 128
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -39,5 +41,8 @@ void JGpopulate_env_list(Shell *shell);
 void execute_child_process(const char *command);
 void JGexecute_with_path(const char *command);
 int search_in_path(const char *command, const char *path, char *full_path);
+char **tokenize_input(const char *input);
+void free_tokens(char **tokens);
+void print_tokens(char **tokens);
 
 #endif
