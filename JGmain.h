@@ -45,5 +45,9 @@ char **tokenize_input(const char *input);
 void free_tokens(char **tokens);
 void print_tokens(char **tokens);
 void interactive_mode(void);
+void handle_commands(const char *input);
+void handle_logical_operators(const char *input);
+void handle_variables(char *input, int status);
+void handle_comments(char *input);
 
 #endif
