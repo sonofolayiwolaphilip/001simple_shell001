@@ -44,5 +44,6 @@ int search_in_path(const char *command, const char *path, char *full_path);
 char **tokenize_input(const char *input);
 void free_tokens(char **tokens);
 void print_tokens(char **tokens);
+void interactive_mode(void);
 
 #endif
