@@ -1,7 +1,7 @@
 #include "JGmain.h"
 
 /**
- * JGcd - Change current working directory
+ * JGcd - function that Changes current working directory
  * @path: The path to change to
  */
 void JGcd(const char *path)
@@ -20,7 +20,7 @@ void JGcd(const char *path)
 }
 
 /**
- * JGexit - Exit the shell
+ * JGexit - Function that Exit the shell
  * @status: The exit status
  */
 void JGexit(const char *status)
@@ -44,7 +44,7 @@ void JGexit(const char *status)
 }
 
 /**
- * JGhelp - Display help information
+ * JGhelp - Function that Display help information
  */
 void JGhelp(void)
 {
@@ -56,7 +56,7 @@ void JGhelp(void)
 }
 
 /**
- * handle_builtin - Execute built-in commands
+ * handle_builtin - Function that Execute built-in commands
  * @command: The command to check
  */
 void handle_builtin(const char *command)
