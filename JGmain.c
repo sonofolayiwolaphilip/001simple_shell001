@@ -12,17 +12,9 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		while (1)
-		{
-			JGread(command, sizeof(command));
-			if (command[0] == '\0')
-				continue;
-			if (strcmp(command, "exit") == 0)
-				break;
-			JGexecute(command);
-			display_prompt();
-		}
+		interactive_mode();
 	}
+
 	else if (argc == 2)
 	{
 		FILE *input_file = fopen(argv[1], "r");

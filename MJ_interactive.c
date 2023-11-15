@@ -20,4 +20,5 @@ void interactive_mode(void)
 
 		JGexecute(command);
 	}
+	display_prompt();
 }
