@@ -52,5 +52,7 @@ void handle_comments(char *input);
 void create_pipe(int pipe_fds[2]);
 void execute_pipeline(char **pipeline);
 void handle_pipeline(const char *command);
+void execute_commands_from_file(const char *file_path);
+int main(int argc, char *argv[]);
 
 #endif

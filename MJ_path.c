@@ -24,7 +24,7 @@ int search_in_path(const char *command, const char *path, char *full_path)
 	while (token != NULL)
 	{
 		snprintf(full_path, PATH_MAX, "%s/%s", token, command);
-		if (access(full_path, F_OK) == 0)
+		if (access(full_path, F_OK | X_OK) == 0)
 		{
 			free(path_copy);
 			return (1);
