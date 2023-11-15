@@ -33,13 +33,12 @@ ssize_t MJ_getline(char **ptr, size_t *len, FILE *stream)
 			BulwarkWidth *= 2;
 			*ptr = realloc(*ptr, BulwarkWidth);
 			if (*ptr == NULL)
-				{
-					perror("realloc");
-					exit(EXIT_FAILURE);
-				}
+			{
+				perror("realloc");
+				exit(EXIT_FAILURE);
+			}
 		}
 	}
-		
 	if (Mrcy == EOF && NumofByte == 0)
 	{
 		return (-1);

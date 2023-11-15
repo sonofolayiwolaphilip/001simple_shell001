@@ -2,8 +2,7 @@
 
 /**
  * JGexecute - Execute the given command.
- * @command: The command to execute.
- * @shell: Pointer to the shell structure.
+ * @command: The command to execute
  */
 void JGexecute(const char *command)
 {

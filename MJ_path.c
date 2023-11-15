@@ -5,7 +5,7 @@
  * @command: The command to search for.
  * @path: The PATH environment variable.
  * @full_path: The full path of the command (output parameter).
- * Returns: 1 if the command is found in the PATH, 0 otherwise.
+ * Return: 1 if the command is found in the PATH, 0 otherwise.
  */
 int search_in_path(const char *command, const char *path, char *full_path)
 {
@@ -39,7 +39,6 @@ int search_in_path(const char *command, const char *path, char *full_path)
 /**
  * JGexecute_with_path - Execute the given command with PATH handling.
  * @command: The command to execute.
- * @shell: Pointer to the shell structure.
  */
 void JGexecute_with_path(const char *command)
 {
