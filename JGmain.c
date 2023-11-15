@@ -14,13 +14,13 @@ int main(int argc, char *argv[])
 	{
 		while (1)
 		{
-			display_prompt();
 			JGread(command, sizeof(command));
 			if (command[0] == '\0')
 				continue;
 			if (strcmp(command, "exit") == 0)
 				break;
 			JGexecute(command);
+			display_prompt();
 		}
 	}
 	else if (argc == 2)

@@ -15,4 +15,5 @@ void JGprint(const char *message)
 void display_prompt(void)
 {
 	JGprint("myshell $ ");
+	fflush(stdout);
 }

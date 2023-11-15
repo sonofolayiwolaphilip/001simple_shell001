@@ -6,6 +6,8 @@
  */
 void JGexecute(const char *command)
 {
+	int status;
+
 	if (strcmp(command, "exit") == 0)
 	{
 		exit(EXIT_SUCCESS);
@@ -22,10 +24,11 @@ void JGexecute(const char *command)
 		else if (child_pid == 0)
 		{
 			execute_child_process(command);
+			exit(EXIT_SUCCESS);
 		}
 		else
 		{
-			wait(NULL);
+			waitpid(child_pid, &status, 0);
 			display_prompt();
 		}
 	}
@@ -53,4 +56,3 @@ void execute_child_process(const char *command)
 	perror("Error executing command");
 	exit(EXIT_FAILURE);
 }
-
