@@ -38,9 +38,15 @@ char **parse_command(const char *command)
 {
 	char *command_copy = strdup(command);
 
-	char **args = malloc(MAX_ARGS * sizeof(char *));
+	char **args = malloc(MAX_ARGS + 1 * sizeof(char *));
 	char *token = strtok(command_copy, " ");
 	int i = 0;
+
+	if (args == NULL)
+	{
+		perror("malloc");
+		exit(EXIT_FAILURE);
+	}
 
 	while (token != NULL)
 	{
