@@ -6,6 +6,11 @@
  */
 void JGread(char *command, size_t size)
 {
+	if (isatty(STDIN_FILENO))
+	{
+		write(STDOUT_FILENO, "myshell $ ", 11);
+	}
+
 	if (fgets(command, size, stdin) == NULL)
 	{
 		if (feof(stdin))
