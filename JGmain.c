@@ -1,4 +1,5 @@
 #include "JGmain.h"
+
 /**
  * main - Entry point for the shell program.
  * @argc: The number of command-line arguments.
@@ -16,13 +17,9 @@ int main(int argc, char *argv[])
 			display_prompt();
 			JGread(command, sizeof(command));
 			if (command[0] == '\0')
-			{
 				continue;
-			}
 			if (strcmp(command, "exit") == 0)
-			{
 				break;
-			}
 			JGexecute(command);
 		}
 	}
@@ -30,7 +27,7 @@ int main(int argc, char *argv[])
 	{
 		FILE *input_file = fopen(argv[1], "r");
 
-		if (input_file == NULL)
+		if (!input_file)
 		{
 			perror("Error opening input file");
 			return (EXIT_FAILURE);
@@ -47,5 +44,6 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Usage: %s [input_file]\n", argv[0]);
 		return (EXIT_FAILURE);
 	}
+
 	return (EXIT_SUCCESS);
 }

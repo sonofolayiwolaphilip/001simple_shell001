@@ -26,6 +26,7 @@ void JGexecute(const char *command)
 		else
 		{
 			wait(NULL);
+			display_prompt();
 		}
 	}
 }

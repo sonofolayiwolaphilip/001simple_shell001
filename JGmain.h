@@ -49,5 +49,8 @@ void handle_commands(const char *input);
 void handle_logical_operators(const char *input);
 void handle_variables(char *input, int status);
 void handle_comments(char *input);
+void create_pipe(int pipe_fds[2]);
+void execute_pipeline(char **pipeline);
+void handle_pipeline(const char *command);
 
 #endif
